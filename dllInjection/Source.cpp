@@ -5,10 +5,10 @@
 int main() {
 
 	// Get full path of DLL to inject
-	const char* path = "C:\\Users\\ofekd\\Downloads\\windows final project\\mydll\\x64\\Debug\\mydll.dll"; //PLEASE INSERT YOUR OWN FULL PATH HERE!!!!
+	const char* path = "C:\\Users\\User\\Downloads\\windows final project\\mydll\\x64\\Debug\\mydll.dll"; //PLEASE INSERT YOUR OWN FULL PATH HERE!!!!
 	DWORD pathLen = strlen(path)+1; //for later use
 
-	// Get LoadLibrary function address –
+	// Get LoadLibrary function address â€“
 	// the address doesn't change at remote process
 	PVOID addrLoadLibrary = (PVOID)GetProcAddress(GetModuleHandle(L"KERNEL32.DLL"), "LoadLibraryA"); //get the load library function from windows kernel
 
